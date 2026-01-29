@@ -16,7 +16,7 @@ import { CurrencyPipe } from '@angular/common';
         <p>{{ product().description }}</p>
         <div class="footer">
           <span class="price">{{ product().price | currency }}</span>
-          <button class="btn-add" (click)="addToCart.emit(product())">Add to Cart</button>
+          <button class="btn-add" (click)="addToCart.emit(product())"><i class="pi pi-cart-plus"></i> Add to Cart</button>
         </div>
       </div>
     </div>
@@ -99,6 +99,9 @@ import { CurrencyPipe } from '@angular/common';
       font-weight: bold;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
     .btn-add:hover {
       transform: scale(1.05);
