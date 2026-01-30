@@ -15,11 +15,14 @@ A modern, fast, and visually appealing e-commerce application for purchasing rar
 - `src/app/models/`: Interfaces (Product, CartItem).
 - `src/app/services/`: Singleton services (ProductService, CartService).
 - `src/app/components/`: Reusable UI components (Navbar, ProductCard).
-- `src/app/pages/`: Main views (ProductList, Cart).
+- `src/app/pages/`: Main views (ProductList, Cart, ProductDetail).
 
-## Current Plan: Phase 1 - Foundation & Listing
-1. Define `Product` model.
-2. Create `CartService` to manage cart state with signals.
-3. Create `ProductListComponent` and `ProductCardComponent`.
-4. Implement `NavbarComponent`.
-5. Set up basic routing.
+## Current Plan: Phase 2 - Product Details & Enhanced UX
+1. **Update `ProductService`**: Add method to fetch a single product by ID.
+2. **Create `ProductDetailComponent`**: 
+   - New page to show full details of a product.
+   - Glassmorphism design for the product container.
+   - "Add to Cart" functionality.
+3. **Update Routing**: Add `/product/:id` route.
+4. **Enhance Navigation**: Link `ProductCard` to the new Detail page.
+5. **UI Polish**: Add smooth transitions and hover effects.

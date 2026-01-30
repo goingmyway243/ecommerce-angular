@@ -24,8 +24,10 @@ import { AuthService } from '../services/auth.service';
 
         @if (isAuthenticated()) {
           <div class="user-menu">
-            <img [src]="currentUser()?.avatar" [alt]="currentUser()?.username" class="avatar">
-            <span class="username">{{ currentUser()?.username }}</span>
+            <a routerLink="/profile" class="profile-link">
+              <img [src]="currentUser()?.avatar" [alt]="currentUser()?.username" class="avatar">
+              <span class="username">{{ currentUser()?.username }}</span>
+            </a>
             <button class="btn-icon" (click)="authService.logout()" title="Logout">
               <i class="pi pi-sign-out"></i>
             </button>
@@ -105,6 +107,16 @@ import { AuthService } from '../services/auth.service';
       gap: 0.75rem;
       padding-left: 1rem;
       border-left: 1px solid #333;
+    }
+    .profile-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .profile-link:hover {
+      opacity: 0.8;
     }
     .avatar {
       width: 32px;
